@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura Premier Class • English Lesson 2: Ramona's Travel Mastery</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Playfair Display, Cinzel, Plus Jakarta Sans, Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Tailwind Config for Riviera Light Luxury Palette -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+          },
+          colors: {
+            alabaster: {
+              50: '#FDFBF7',
+              100: '#FAF6EE',
+              200: '#F4EFE6',
+              300: '#E9DEC8',
+              400: '#DDD0B3'
+            },
+            champagne: {
+              300: '#F5E4C3',
+              400: '#E8D09E',
+              500: '#D8AF6B',
+              600: '#C59A58',
+              700: '#A3793B',
+              800: '#7F5A26',
+              900: '#5A3D14'
+            },
+            mediterranean: {
+              50: '#F0F6FC',
+              100: '#E0EEF9',
+              200: '#BFDBF2',
+              500: '#2A69AC',
+              700: '#1D4E89',
+              800: '#1A365D',
+              900: '#0F2342'
+            },
+            sage: {
+              50: '#F4F7F4',
+              100: '#E2ECE2',
+              600: '#3D6E50',
+              700: '#2F573E'
+            }
+          },
+          boxShadow: {
+            'luxury': '0 20px 45px -15px rgba(127, 90, 38, 0.12), 0 0 25px rgba(26, 54, 93, 0.04)',
+            'card': '0 10px 30px -5px rgba(26, 54, 93, 0.06), 0 2px 6px rgba(0,0,0,0.02)',
+            'gold': '0 12px 30px -5px rgba(197, 154, 88, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #F4EFE6; }
+    ::-webkit-scrollbar-thumb { background: #C59A58; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #A3793B; }
+
+    /* Glass Panels */
+    .glass-light {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(197, 154, 88, 0.22);
+    }
+    .glass-card-warm {
+      background: rgba(253, 251, 247, 0.95);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(163, 121, 59, 0.18);
+    }
+
+    /* Luxury Gold Gradients */
+    .text-gold-luxury {
+      background: linear-gradient(135deg, #7F5A26 0%, #C59A58 50%, #E8D09E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Perforated Boarding Pass Notches */
+    .boarding-cut-left::before {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #F4EFE6;
+      border: 1px solid rgba(197, 154, 88, 0.3);
+      z-index: 10;
+    }
+    .boarding-cut-right::after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #F4EFE6;
+      border: 1px solid rgba(197, 154, 88, 0.3);
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body class="bg-[#FAF6EE] text-slate-800 font-sans min-h-screen relative selection:bg-champagne-600 selection:text-white antialiased">
+
+  <!-- Ambient Cloud & Aviation Overlay -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0 opacity-45">
+    <div class="absolute -top-24 -left-20 w-[850px] h-[360px] bg-gradient-to-r from-mediterranean-100 via-champagne-300 to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 -right-40 w-[900px] h-[450px] bg-gradient-to-l from-amber-100 via-alabaster-200 to-transparent rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- FLOATING PERSISTENT AUDIO COCKPIT -->
+  <aside class="fixed bottom-6 right-6 z-50">
+    <div class="glass-light px-4 py-3 rounded-2xl flex items-center gap-3.5 shadow-gold border border-champagne-500/30">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="text-xs text-slate-700 font-bold font-mono">TEMPO: <span id="global-speed-label" class="text-champagne-700">0.82x</span></span>
+      </div>
+      <div class="w-px h-4 bg-slate-300"></div>
+      <button onclick="cycleAudioSpeed()" class="text-xs text-mediterranean-800 hover:text-champagne-700 font-bold transition flex items-center gap-1" title="Adjust speech tempo for Ramona">
+        <i data-lucide="gauge" class="w-3.5 h-3.5"></i> <span id="speed-toggle-btn-txt">Speed: Gentle</span>
+      </button>
+      <div class="w-px h-4 bg-slate-300"></div>
+      <button onclick="playTerminalChime(true)" class="text-xs text-champagne-800 hover:text-champagne-900 font-bold flex items-center gap-1.5 transition" title="Play Authentic 2-Tone Airport Chime">
+        <i data-lucide="bell" class="w-3.5 h-3.5 text-champagne-600"></i> <span>Chime</span>
+      </button>
+      <button onclick="stopAnySpeech()" class="p-1.5 rounded-lg text-slate-500 hover:text-rose-600 hover:bg-slate-100 transition" title="Mute/Stop speech">
+        <i data-lucide="square" class="w-3.5 h-3.5"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- NAVIGATION HEADER WITH CHAPTER PROGRESS -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-champagne-500/20 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
+      
+      <!-- Logo Branding -->
+      <div class="flex items-center gap-3.5">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-champagne-500 to-champagne-800 flex items-center justify-center text-white shadow-md shadow-champagne-600/30">
+          <i data-lucide="plane-takeoff" class="w-5 h-5 text-white"></i>
+        </div>
+        <div>
+          <span class="font-cinzel text-sm sm:text-base tracking-[0.2em] font-bold text-gold-luxury block">
+            AURA PREMIER CLASS
+          </span>
+          <span class="text-[11px] text-slate-500 font-medium tracking-wider uppercase">
+            Lesson 2 • Multi-Level Travel English for Ramona
+          </span>
+        </div>
+      </div>
+
+      <!-- Quick Level Navigator -->
+      <nav class="hidden lg:flex items-center gap-4 text-xs font-bold text-slate-600">
+        <a href="#level-1" class="hover:text-champagne-700 transition">L1: Blueprints</a>
+        <a href="#level-2" class="hover:text-champagne-700 transition">L2: Mechanics</a>
+        <a href="#level-3" class="hover:text-champagne-700 transition">L3: Phraseology</a>
+        <a href="#level-4" class="hover:text-champagne-700 transition">L4: Lounge Audio</a>
+        <a href="#level-5" class="hover:text-champagne-700 transition">L5: Speaking</a>
+        <a href="#level-6" class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-champagne-600 to-champagne-700 text-white hover:shadow-gold transition flex items-center gap-1.5">
+          <i data-lucide="pen-tool" class="w-3.5 h-3.5"></i> L6: Production
+        </a>
+      </nav>
+
+      <!-- Overall Completion Meter -->
+      <div class="flex items-center gap-2 text-xs">
+        <span class="text-slate-500 font-mono font-semibold hidden sm:inline">Progress:</span>
+        <div class="w-20 sm:w-28 h-2 bg-alabaster-300 rounded-full overflow-hidden">
+          <div id="master-progress-bar" class="h-full bg-champagne-600 transition-all duration-500" style="width: 20%;"></div>
+        </div>
+        <span id="master-progress-text" class="font-mono text-champagne-800 font-bold">20%</span>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CANVAS -->
+  <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 py-8 sm:py-12 space-y-20">
+
+    <!-- HERO BOARDING PASS: OTP -> LHR FOR RAMONA -->
+    <section class="relative">
+      <div class="glass-light rounded-3xl overflow-hidden border border-champagne-500/30 shadow-luxury">
+        
+        <!-- Champagne Top Banner -->
+        <div class="bg-gradient-to-r from-alabaster-200 via-champagne-300/40 to-alabaster-200 px-6 sm:px-8 py-4 border-b border-champagne-500/20 flex flex-wrap items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <span class="px-3.5 py-1 rounded-full bg-champagne-500/20 border border-champagne-600/30 text-champagne-900 text-xs font-bold uppercase tracking-widest flex items-center gap-1.5">
+              <i data-lucide="ticket" class="w-3.5 h-3.5 text-champagne-700"></i> International Boarding Pass
+            </span>
+            <span class="text-xs text-slate-500 font-mono tracking-widest hidden sm:inline">PASSENGER: POPESCU / RAMONA</span>
+          </div>
+
+          <button onclick="playTerminalChimeAndWelcome()" class="px-4 py-2 rounded-xl bg-white hover:bg-champagne-50 border border-champagne-500/30 text-champagne-800 text-xs font-bold flex items-center gap-2 shadow-sm transition hover:shadow-gold">
+            <i data-lucide="volume-2" class="w-4 h-4 text-champagne-600"></i>
+            <span>Play Boarding Chime & Welcome</span>
+          </button>
+        </div>
+
+        <!-- Ticket Body -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 bg-white/75">
+          
+          <!-- Left Main Body: 8 cols -->
+          <div class="lg:col-span-8 p-6 sm:p-10 space-y-6 lg:border-r lg:border-dashed lg:border-champagne-500/40 relative boarding-cut-right">
+            <div>
+              <span class="text-xs uppercase font-mono tracking-widest text-champagne-700 font-bold block mb-1">Premier Guest</span>
+              <h1 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">
+                Welcome Aboard, <span class="text-gold-luxury">Ramona</span>.
+              </h1>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mt-2">
+                Astăzi facem saltul de la aplicații simple la conversație fluentă de călătorie. Vom parcurge 6 niveluri concepute special pentru gândirea românească: de la cum funcționează „motorul” întrebărilor și negațiilor în engleză, până la rezolvarea fără stres a oricărei situații în aeroport sau la hotel.
+              </p>
+            </div>
+
+            <!-- Route Graphic (OTP -> LHR) -->
+            <div class="bg-alabaster-100 p-5 rounded-2xl border border-champagne-500/20 space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono uppercase text-slate-500">
+                <span class="text-slate-700 font-bold flex items-center gap-1.5"><i data-lucide="plane-takeoff" class="w-3.5 h-3.5 text-champagne-600"></i> Departure</span>
+                <span class="text-champagne-800 font-bold bg-white px-3 py-1 rounded-full border border-champagne-300">Aura Flight #AU-882 • On Time</span>
+                <span class="text-mediterranean-800 font-bold flex items-center gap-1.5"><i data-lucide="plane-landing" class="w-3.5 h-3.5 text-mediterranean-700"></i> Arrival</span>
+              </div>
+
+              <div class="flex items-center justify-between py-1">
+                <div>
+                  <div class="text-2xl sm:text-3xl font-cinzel font-bold text-slate-900">OTP</div>
+                  <div class="text-xs text-slate-500">Bucharest Henri Coandă</div>
+                </div>
+
+                <div class="flex-1 mx-4 sm:mx-8 relative flex items-center justify-center">
+                  <div class="w-full border-t-2 border-dashed border-champagne-400"></div>
+                  <div class="absolute p-2.5 rounded-full bg-white border border-champagne-500/30 text-champagne-700 shadow-md">
+                    <i data-lucide="plane" class="w-5 h-5 transform rotate-45"></i>
+                  </div>
+                </div>
+
+                <div class="text-right">
+                  <div class="text-2xl sm:text-3xl font-cinzel font-bold text-mediterranean-800">LHR</div>
+                  <div class="text-xs text-slate-500">London Heathrow Terminal 2</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6 Learning Pillars Quick Matrix -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-1 text-xs">
+              <div class="p-2.5 rounded-xl bg-white border border-champagne-500/20 shadow-sm">
+                <span class="font-bold text-champagne-800 block">Level 1</span>
+                <span class="text-slate-600 text-[11px]">Cognitive Blueprints</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white border border-champagne-500/20 shadow-sm">
+                <span class="font-bold text-champagne-800 block">Level 2</span>
+                <span class="text-slate-600 text-[11px]">Mechanics & Puzzles</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white border border-champagne-500/20 shadow-sm">
+                <span class="font-bold text-champagne-800 block">Level 3</span>
+                <span class="text-slate-600 text-[11px]">Travel Phraseology</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white border border-champagne-500/20 shadow-sm">
+                <span class="font-bold text-champagne-800 block">Level 4</span>
+                <span class="text-slate-600 text-[11px]">Listening Lounge</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white border border-champagne-500/20 shadow-sm">
+                <span class="font-bold text-champagne-800 block">Level 5</span>
+                <span class="text-slate-600 text-[11px]">Speaking Cockpit</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white border border-champagne-500/20 shadow-sm">
+                <span class="font-bold text-champagne-800 block">Level 6</span>
+                <span class="text-slate-600 text-[11px]">Production Studio</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Ticket Stub: 4 cols -->
+          <div class="lg:col-span-4 p-6 sm:p-10 bg-alabaster-50/80 flex flex-col justify-between space-y-6 relative boarding-cut-left">
+            <div class="space-y-4">
+              <div class="flex justify-between items-center border-b border-champagne-500/20 pb-3">
+                <span class="font-cinzel text-xs uppercase tracking-widest text-champagne-800 font-bold">BOARDING STUB</span>
+                <span class="text-xs font-mono font-bold text-slate-500">SEAT: 01-A</span>
+              </div>
+
+              <div class="space-y-2.5 text-xs">
+                <div class="flex justify-between py-1 border-b border-slate-100">
+                  <span class="text-slate-500">Student Name:</span>
+                  <span class="font-bold text-slate-800">Ramona Popescu</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-slate-100">
+                  <span class="text-slate-500">Grammar Target:</span>
+                  <span class="font-bold text-slate-800">Questions & Future Forms</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-slate-100">
+                  <span class="text-slate-500">Native Filter:</span>
+                  <span class="font-bold text-emerald-700">RO Contrastive Support</span>
+                </div>
+                <div class="flex justify-between py-1">
+                  <span class="text-slate-500">Speech Rate:</span>
+                  <span class="font-bold text-champagne-800">Gentle (0.82x - 0.85x)</span>
+                </div>
+              </div>
+
+              <!-- Pedagogical Teacher Note -->
+              <div class="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-900 leading-relaxed font-serif italic">
+                „Ramona, engleza nu se traduce cuvânt cu cuvânt din română. Englezii funcționează cu piese de Lego bine stabilite. Odată ce înțelegi unde stau piesele, vei vorbi fără teamă!”
+              </div>
+            </div>
+
+            <!-- Authentic Stylized Barcode -->
+            <div class="space-y-1 text-center pt-2">
+              <div class="h-11 w-full flex items-center justify-center gap-1 opacity-70">
+                <span class="w-1.5 h-full bg-slate-800"></span><span class="w-3 h-full bg-slate-800"></span>
+                <span class="w-0.5 h-full bg-slate-800"></span><span class="w-2 h-full bg-slate-800"></span>
+                <span class="w-4 h-full bg-slate-800"></span><span class="w-1 h-full bg-slate-800"></span>
+                <span class="w-2.5 h-full bg-slate-800"></span><span class="w-0.5 h-full bg-slate-800"></span>
+                <span class="w-3.5 h-full bg-slate-800"></span><span class="w-1.5 h-full bg-slate-800"></span>
+              </div>
+              <span class="text-[10px] font-mono tracking-widest text-slate-500 font-bold">RAMONA-AURA-LEVELS-1-TO-6</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- LEVEL 1: FOUNDATIONAL COGNITIVE ARCHITECTURES (BLUEPRINTS & RO CONTRAST) -->
+    <!-- ========================================================================= -->
+    <section id="level-1" class="space-y-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between border-b border-champagne-500/25 pb-4 gap-2">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-champagne-800 font-bold flex items-center gap-2">
+            <i data-lucide="layers" class="w-4 h-4 text-champagne-600"></i> Level 1 • Foundational Cognitive Architecture
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900">
+            How English Thinks vs. How Romanian Thinks
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-500 max-w-sm sm:text-right">
+          Capcanele mentale tipice pentru români și anatomia completă a întrebărilor și negațiilor.
+        </p>
+      </div>
+
+      <!-- Contrastive Analysis Callouts (Why Romanians make mistakes) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <!-- Trap 1 -->
+        <div class="glass-card-warm p-5 rounded-3xl border border-rose-300 shadow-sm space-y-2.5">
+          <div class="flex items-center gap-2 text-rose-700 font-bold text-xs uppercase font-mono">
+            <i data-lucide="alert-triangle" class="w-4 h-4"></i> Capcana 1: Intonația Simplă
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">„Tu vorbești engleză?”</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            În română ridicăm doar vocea la sfârșit. În engleză este <strong>interzis</strong> să spui <em>„You speak English?”</em>. Trebuie să pui obligatoriu auxiliarul <strong class="text-mediterranean-700 font-mono">DO / DOES</strong> în față!
+          </p>
+          <div class="p-2.5 rounded-xl bg-white border border-rose-200 text-xs text-rose-900 font-mono">
+            ✓ Corect: <strong>Do you speak English?</strong>
+          </div>
+        </div>
+
+        <!-- Trap 2 -->
+        <div class="glass-card-warm p-5 rounded-3xl border border-amber-300 shadow-sm space-y-2.5">
+          <div class="flex items-center gap-2 text-amber-700 font-bold text-xs uppercase font-mono">
+            <i data-lucide="alert-triangle" class="w-4 h-4"></i> Capcana 2: Viitorul Imediat
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">„Plec mâine la Roma”</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Românii folosesc prezentul pentru viitor: <em>„Vin mâine”</em>, <em>„Plecăm la vară”</em>. În engleză nu spui <em>„I go tomorrow”</em>! Dacă ai rezervare sau plan stabilit, este <strong>I am going to fly / I am flying</strong>.
+          </p>
+          <div class="p-2.5 rounded-xl bg-white border border-amber-200 text-xs text-amber-900 font-mono">
+            ✓ Corect: <strong>I am going to fly to Rome.</strong>
+          </div>
+        </div>
+
+        <!-- Trap 3 -->
+        <div class="glass-card-warm p-5 rounded-3xl border border-emerald-300 shadow-sm space-y-2.5">
+          <div class="flex items-center gap-2 text-emerald-700 font-bold text-xs uppercase font-mono">
+            <i data-lucide="help-circle" class="w-4 h-4"></i> Capcana 3: Do/Does vs. Am/Is/Are
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Fapte vs. Acțiuni în Desfășurare</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Dacă verbul este o stare generală sau orar de zbor ➜ folosești <strong>DO / DOES</strong>. Dacă întrebi despre ce se întâmplă chiar în această secundă ➜ <strong>AM / IS / ARE + -ING</strong>.
+          </p>
+          <div class="p-2.5 rounded-xl bg-white border border-emerald-200 text-xs text-emerald-900 font-mono">
+            ✓ Corect: <strong>Are you waiting for luggage?</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Complete Comparative Matrix (Questions, Negatives & Future) -->
+      <div class="glass-light rounded-3xl p-6 sm:p-8 space-y-6 border border-champagne-500/25 shadow-card">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-champagne-500/20 pb-4">
+          <div>
+            <span class="text-xs font-mono font-bold uppercase tracking-wider text-champagne-800">The Universal Structural Table</span>
+            <h3 class="font-serif font-bold text-xl text-slate-900">Anatomia Celor 4 Timpuri ale Călătorului</h3>
+          </div>
+          <button onclick="speakText('Present Simple is for schedules and facts. Present Continuous is for right now. Will is for spontaneous offers. Going to is for booked vacation plans.')" class="text-xs font-bold text-champagne-800 hover:text-champagne-900 flex items-center gap-1.5 transition">
+            <i data-lucide="volume-2" class="w-4 h-4 text-champagne-600"></i> Ascultă explicația audio
+          </button>
+        </div>
+
+        <!-- Matrix Table -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="border-b border-champagne-500/30 text-slate-500 font-mono text-[11px] uppercase">
+                <th class="py-3 px-3">Timpul & Scopul</th>
+                <th class="py-3 px-3">Formula Întrebare (?)</th>
+                <th class="py-3 px-3">Formula Negație (-)</th>
+                <th class="py-3 px-3">Exemplu Real în Aeroport / Hotel</th>
+                <th class="py-3 px-2 text-center">Audio</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700">
+              
+              <!-- Row 1: Present Simple -->
+              <tr class="hover:bg-alabaster-100/60 transition">
+                <td class="py-3.5 px-3 font-bold text-slate-900">
+                  Present Simple<br>
+                  <span class="text-[11px] font-normal text-slate-500">Orare, fapte, servicii</span>
+                </td>
+                <td class="py-3.5 px-3 font-mono text-xs">
+                  <span class="text-blue-700 font-bold">Do / Does</span> + Subiect + Verb bază
+                </td>
+                <td class="py-3.5 px-3 font-mono text-xs">
+                  Subiect + <span class="text-rose-600 font-bold">don't / doesn't</span> + Verb
+                </td>
+                <td class="py-3.5 px-3 text-xs leading-relaxed">
+                  "<strong>Does</strong> this shuttle bus stop at Terminal 2?"<br>
+                  <span class="text-slate-400 italic">"I don't have liquid in my bag."</span>
+                </td>
+                <td class="py-3.5 px-2 text-center">
+                  <button onclick="speakText('Does this shuttle bus stop at Terminal 2? I do not have liquid in my bag.')" class="p-2 rounded-xl bg-alabaster-200 text-champagne-800 hover:bg-champagne-600 hover:text-white transition">
+                    <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 2: Present Continuous -->
+              <tr class="hover:bg-alabaster-100/60 transition">
+                <td class="py-3.5 px-3 font-bold text-slate-900">
+                  Present Continuous<br>
+                  <span class="text-[11px] font-normal text-slate-500">Se întâmplă CHIAR ACUM</span>
+                </td>
+                <td class="py-3.5 px-3 font-mono text-xs">
+                  <span class="text-blue-700 font-bold">Am / Is / Are</span> + Subiect + Verb-ING
+                </td>
+                <td class="py-3.5 px-3 font-mono text-xs">
+                  Subiect + <span class="text-rose-600 font-bold">am not / isn't / aren't</span> + -ING
+                </td>
+                <td class="py-3.5 px-3 text-xs leading-relaxed">
+                  "<strong>Are</strong> you <strong>boarding</strong> rows 15 to 30 right now?"<br>
+                  <span class="text-slate-400 italic">"We are not checking any luggage."</span>
+                </td>
+                <td class="py-3.5 px-2 text-center">
+                  <button onclick="speakText('Are you boarding rows 15 to 30 right now? We are not checking any luggage.')" class="p-2 rounded-xl bg-alabaster-200 text-champagne-800 hover:bg-champagne-600 hover:text-white transition">
+                    <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 3: Future Going To -->
+              <tr class="hover:bg-alabaster-100/60 transition">
+                <td class="py-3.5 px-3 font-bold text-slate-900">
+                  Future: Be Going To<br>
+                  <span class="text-[11px] font-normal text-slate-500">Plan stabilit, vacanță cumpărată</span>
+                </td>
+                <td class="py-3.5 px-3 font-mono text-xs">
+                  <span class="text-blue-700 font-bold">Am / Is / Are</span> + Subj + <span class="text-emerald-700 font-bold">going to</span> + Verb
+                </td>
+                <td class="py-3.5 px-3 font-mono text-xs">
+                  Subj + <span class="text-rose-600 font-bold">is/are not</span> + going to + Verb
+                </td>
+                <td class="py-3.5 px-3 text-xs leading-relaxed">
+                  "<strong>Are</strong> you <strong>going to stay</strong> at the hotel for five nights?"<br>
+                  <span class="text-slate-400 italic">"Ramona is going to visit the museum tomorrow."</span>
+                </td>
+                <td class="py-3.5 px-2 text-center">
+                  <button onclick="speakText('Are you going to stay at the hotel for five nights? Ramona is going to visit the museum tomorrow.')" class="p-2 rounded-xl bg-alabaster-200 text-champagne-800 hover:bg-champagne-600 hover:text-white transition">
+                    <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 4: Future Will -->
+              <tr class="hover:bg-alabaster-100/60 transition">
+                <td class="py-3.5 px-3 font-bold text-slate-900">
+                  Future: Will ('ll)<br>
+                  <span class="text-[11px] font-normal text-slate-500">Decizie pe loc, ajutor, comandă</span>
+                </td>
+                <td class="py-3.5 px-3 font-mono text-xs">
+                  <span class="text-blue-700 font-bold">Will</span> + Subiect + Verb bază
+                </td>
+                <td class="py-3.5 px-3 font-mono text-xs">
+                  Subiect + <span class="text-rose-600 font-bold">won't (will not)</span> + Verb
+                </td>
+                <td class="py-3.5 px-3 text-xs leading-relaxed">
+                  "<strong>Will</strong> you please help me with this heavy suitcase?"<br>
+                  <span class="text-slate-400 italic">"I will take a cappuccino and the bill, please."</span>
+                </td>
+                <td class="py-3.5 px-2 text-center">
+                  <button onclick="speakText('Will you please help me with this heavy suitcase? I will take a cappuccino and the bill, please.')" class="p-2 rounded-xl bg-alabaster-200 text-champagne-800 hover:bg-champagne-600 hover:text-white transition">
+                    <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+                  </button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- LEVEL 2: CONTROLLED MECHANICS & INTERACTIVE SENTENCE PUZZLES             -->
+    <!-- ========================================================================= -->
+    <section id="level-2" class="space-y-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between border-b border-champagne-500/25 pb-4 gap-2">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-champagne-800 font-bold flex items-center gap-2">
+            <i data-lucide="puzzle" class="w-4 h-4 text-champagne-600"></i> Level 2 • Controlled Mechanics & Drills
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900">
+            Interactive Sentence Assembly Laboratory
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-500 max-w-sm sm:text-right">
+          Antrenează-ți reflexul gramatical asamblând frazele din piese de puzzle.
+        </p>
+      </div>
+
+      <!-- Puzzle Console -->
+      <div class="glass-light rounded-3xl p-6 sm:p-8 space-y-6 border border-champagne-500/25 shadow-card">
+        
+        <!-- Puzzle Navigation Selector -->
+        <div class="flex flex-wrap items-center justify-between gap-3 border-b border-champagne-500/20 pb-4">
+          <div class="flex flex-wrap gap-2 text-xs font-semibold">
+            <button onclick="switchPuzzle(0)" id="puz-tab-0" class="px-4 py-2 rounded-xl bg-champagne-600 text-white shadow-sm transition">Drill 1: Întrebare Orar (Present Simple)</button>
+            <button onclick="switchPuzzle(1)" id="puz-tab-1" class="px-4 py-2 rounded-xl bg-alabaster-200 text-slate-700 hover:bg-champagne-100 transition">Drill 2: Acțiune Acum (Continuous)</button>
+            <button onclick="switchPuzzle(2)" id="puz-tab-2" class="px-4 py-2 rounded-xl bg-alabaster-200 text-slate-700 hover:bg-champagne-100 transition">Drill 3: Decizie pe loc (Will)</button>
+            <button onclick="switchPuzzle(3)" id="puz-tab-3" class="px-4 py-2 rounded-xl bg-alabaster-200 text-slate-700 hover:bg-champagne-100 transition">Drill 4: Plan Vacanță (Going to)</button>
+          </div>
+          <span class="text-xs text-slate-500 font-mono font-bold">PUZZLE <span id="puz-current-num">1</span> OF 4</span>
+        </div>
+
+        <!-- Active Exercise Zone -->
+        <div class="bg-alabaster-100/80 p-6 rounded-2xl border border-champagne-500/20 space-y-5">
+          <div class="space-y-1">
+            <div class="text-[11px] font-mono uppercase text-champagne-800 font-bold">Obiectivul Ramonei în Română:</div>
+            <h3 id="puzzle-ro-target" class="font-serif text-lg font-bold text-slate-900">
+              „Pleacă acest tren spre centrul orașului la fiecare 15 minute?”
+            </h3>
+          </div>
+
+          <!-- Assembled Word Strip -->
+          <div class="space-y-1.5">
+            <span class="text-xs font-bold text-slate-600">Construcția ta în limba engleză:</span>
+            <div class="min-h-[64px] p-3.5 rounded-2xl bg-white border-2 border-dashed border-champagne-400 flex flex-wrap items-center gap-2">
+              <div id="puzzle-built-zone" class="flex flex-wrap items-center gap-2">
+                <!-- Clicked tokens appear here -->
+              </div>
+              <span id="puzzle-empty-hint" class="text-xs text-slate-400 italic">Apasă pe cuvintele de mai jos în ordinea corectă...</span>
+            </div>
+          </div>
+
+          <!-- Word Bank (Tokens) -->
+          <div class="space-y-2">
+            <span class="text-xs font-mono uppercase font-bold text-slate-500">Bancă de cuvinte (apasă pentru a adăuga):</span>
+            <div id="puzzle-tokens-bank" class="flex flex-wrap items-center gap-2.5">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Bottom Action Buttons & Feedback -->
+          <div class="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-champagne-500/15">
+            <div id="puzzle-feedback-msg" class="text-xs font-bold text-slate-600 flex items-center gap-1.5">
+              <span>Alege cuvintele și apasă verifică.</span>
+            </div>
+
+            <div class="flex items-center gap-2.5">
+              <button onclick="checkPuzzleAnswer()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-champagne-600 to-champagne-700 text-white font-bold text-xs shadow-md hover:shadow-gold transition flex items-center gap-1.5">
+                <i data-lucide="check-circle" class="w-4 h-4"></i> Verifică Ordinea
+              </button>
+              <button onclick="speakPuzzleSentence()" class="px-3.5 py-2.5 rounded-xl bg-white border border-champagne-400 text-champagne-800 hover:bg-champagne-50 text-xs font-bold transition flex items-center gap-1.5" title="Pronunță ce ai asamblat">
+                <i data-lucide="volume-2" class="w-4 h-4 text-champagne-600"></i> Ascultă
+              </button>
+              <button onclick="resetPuzzleTokens()" class="px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-600 hover:bg-slate-100 text-xs font-semibold transition">
+                Resetează
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- LEVEL 3: DEEP CONTEXTUAL VOCABULARY & TRAVEL PHRASEOLOGY                  -->
+    <!-- ========================================================================= -->
+    <section id="level-3" class="space-y-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between border-b border-champagne-500/25 pb-4 gap-2">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-champagne-800 font-bold flex items-center gap-2">
+            <i data-lucide="compass" class="w-4 h-4 text-champagne-600"></i> Level 3 • Deep Travel Phraseology
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900">
+            Ramona's International Survival Vault
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-500 max-w-sm sm:text-right">
+          6 scenarii reale de călătorie. Fiecare expresie are pronunție fonetică, subtilități de politețe și audio la 0.82x.
+        </p>
+      </div>
+
+      <!-- Scenarios Selector Filter -->
+      <div class="flex flex-wrap gap-2 text-xs font-semibold">
+        <button onclick="filterVault('all')" id="vtab-all" class="px-4 py-2 rounded-xl bg-champagne-600 text-white shadow-sm transition">Toate cele 6 Zone</button>
+        <button onclick="filterVault('airport')" id="vtab-airport" class="px-4 py-2 rounded-xl bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition">1. Terminal & Porți</button>
+        <button onclick="filterVault('customs')" id="vtab-customs" class="px-4 py-2 rounded-xl bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition">2. Control Pașapoarte</button>
+        <button onclick="filterVault('luggage')" id="vtab-luggage" class="px-4 py-2 rounded-xl bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition">3. Bagaje Pierdute</button>
+        <button onclick="filterVault('hotel')" id="vtab-hotel" class="px-4 py-2 rounded-xl bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition">4. Cazare & Hotel</button>
+        <button onclick="filterVault('dining')" id="vtab-dining" class="px-4 py-2 rounded-xl bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition">5. Cafenele & Restaurante</button>
+        <button onclick="filterVault('taxi')" id="vtab-taxi" class="px-4 py-2 rounded-xl bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition">6. Taxi & Urgențe</button>
+      </div>
+
+      <!-- Phrase Vault Grid -->
+      <div id="vault-items-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Phrase 1: Airport -->
+        <div class="vault-card glass-light p-5 rounded-3xl border border-champagne-500/20 shadow-card space-y-3.5 hover:border-champagne-400 transition" data-category="airport">
+          <div class="flex items-start justify-between">
+            <span class="px-2.5 py-0.5 rounded-md bg-mediterranean-50 text-mediterranean-800 text-[10px] font-mono font-bold uppercase">Terminal & Porți</span>
+            <button onclick="speakText('Excuse me, which way is Gate 24B? Is it far from here?')" class="p-2 rounded-xl bg-alabaster-200 text-champagne-800 hover:bg-champagne-600 hover:text-white transition" title="Pronunță">
+              <i data-lucide="volume-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm">"Excuse me, which way is Gate 24B?"</h4>
+            <span class="text-xs font-serif italic text-slate-400">/ɪkˈskjuːz miː wɪtʃ weɪ ɪz ɡeɪt/</span>
+          </div>
+          <div class="p-3 rounded-2xl bg-alabaster-100 text-xs space-y-1">
+            <p class="font-semibold text-champagne-900">RO: Mă scuzați, în ce direcție este Poarta 24B?</p>
+            <p class="text-slate-500 text-[11px] leading-relaxed">
+              💡 <strong>Sfat de politețe:</strong> Începe întotdeauna cu <em>„Excuse me”</em>. În aeroporturile din Anglia sau vestul Europei, a întreba direct fără această introducere sună prea tăios.
+            </p>
+          </div>
+        </div>
+
+        <!-- Phrase 2: Customs / Border Control -->
+        <div class="vault-card glass-light p-5 rounded-3xl border border-champagne-500/20 shadow-card space-y-3.5 hover:border-champagne-400 transition" data-category="customs">
+          <div class="flex items-start justify-between">
+            <span class="px-2.5 py-0.5 rounded-md bg-amber-50 text-amber-800 text-[10px] font-mono font-bold uppercase">Control Pașapoarte</span>
+            <button onclick="speakText('I am visiting for holidays for one week. Here is my return ticket and hotel booking.')" class="p-2 rounded-xl bg-alabaster-200 text-champagne-800 hover:bg-champagne-600 hover:text-white transition" title="Pronunță">
+              <i data-lucide="volume-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm">"I am visiting for holidays for one week."</h4>
+            <span class="text-xs font-serif italic text-slate-400">/aɪ æm ˈvɪzɪtɪŋ fɔːr ˈhɑːlədeɪz/</span>
+          </div>
+          <div class="p-3 rounded-2xl bg-alabaster-100 text-xs space-y-1">
+            <p class="font-semibold text-champagne-900">RO: Sunt în vacanță pentru o săptămână.</p>
+            <p class="text-slate-500 text-[11px] leading-relaxed">
+              💡 <strong>Răspunsul la întrebarea ofițerului:</strong> Când ofițerul întreabă <em>„What is the purpose of your visit?”</em>, acesta este răspunsul perfect și sigur.
+            </p>
+          </div>
+        </div>
+
+        <!-- Phrase 3: Lost Luggage -->
+        <div class="vault-card glass-light p-5 rounded-3xl border border-champagne-500/20 shadow-card space-y-3.5 hover:border-champagne-400 transition" data-category="luggage">
+          <div class="flex items-start justify-between">
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-50 text-rose-800 text-[10px] font-mono font-bold uppercase">Bagaje Pierdute</span>
+            <button onclick="speakText('My suitcase did not arrive on the carousel. Here is my luggage receipt tag.')" class="p-2 rounded-xl bg-alabaster-200 text-champagne-800 hover:bg-champagne-600 hover:text-white transition" title="Pronunță">
+              <i data-lucide="volume-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm">"My suitcase did not arrive on the carousel."</h4>
+            <span class="text-xs font-serif italic text-slate-400">/maɪ ˈsuːtkeɪs dɪd nɑːt əˈraɪv/</span>
+          </div>
+          <div class="p-3 rounded-2xl bg-alabaster-100 text-xs space-y-1">
+            <p class="font-semibold text-champagne-900">RO: Valiza mea nu a apărut pe bandă.</p>
+            <p class="text-slate-500 text-[11px] leading-relaxed">
+              💡 <strong>Cuvânt cheie:</strong> Banda rotativă pe care vin valizele se numește <em>carousel</em> sau <em>baggage belt</em>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Phrase 4: Hotel Check-in -->
+        <div class="vault-card glass-light p-5 rounded-3xl border border-champagne-500/20 shadow-card space-y-3.5 hover:border-champagne-400 transition" data-category="hotel">
+          <div class="flex items-start justify-between">
+            <span class="px-2.5 py-0.5 rounded-md bg-emerald-50 text-emerald-800 text-[10px] font-mono font-bold uppercase">Cazare & Hotel</span>
+            <button onclick="speakText('Could you please keep our bags until check-in time at three PM?')" class="p-2 rounded-xl bg-alabaster-200 text-champagne-800 hover:bg-champagne-600 hover:text-white transition" title="Pronunță">
+              <i data-lucide="volume-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm">"Could you keep our bags until check-in?"</h4>
+            <span class="text-xs font-serif italic text-slate-400">/kʊd juː kiːp aʊər bæɡz/</span>
+          </div>
+          <div class="p-3 rounded-2xl bg-alabaster-100 text-xs space-y-1">
+            <p class="font-semibold text-champagne-900">RO: Ați putea să ne păstrați bagajele până la cazare?</p>
+            <p class="text-slate-500 text-[11px] leading-relaxed">
+              💡 <strong>Salvarea zilei:</strong> Când avionul aterizează la ora 11:00, dar camera e gata la 15:00, întreabă la recepție folosind această formulă salvatoare.
+            </p>
+          </div>
+        </div>
+
+        <!-- Phrase 5: Dining & Restaurant -->
+        <div class="vault-card glass-light p-5 rounded-3xl border border-champagne-500/20 shadow-card space-y-3.5 hover:border-champagne-400 transition" data-category="dining">
+          <div class="flex items-start justify-between">
+            <span class="px-2.5 py-0.5 rounded-md bg-champagne-300 text-champagne-900 text-[10px] font-mono font-bold uppercase">Restaurant</span>
+            <button onclick="speakText('We are ready to order. I will have the grilled salmon, please. Does it come with vegetables?')" class="p-2 rounded-xl bg-alabaster-200 text-champagne-800 hover:bg-champagne-600 hover:text-white transition" title="Pronunță">
+              <i data-lucide="volume-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm">"I will have the grilled salmon, please."</h4>
+            <span class="text-xs font-serif italic text-slate-400">/aɪ wɪl hæv ðə ɡrɪld ˈsæm.ən/</span>
+          </div>
+          <div class="p-3 rounded-2xl bg-alabaster-100 text-xs space-y-1">
+            <p class="font-semibold text-champagne-900">RO: Eu voi lua somonul la grătar, vă rog.</p>
+            <p class="text-slate-500 text-[11px] leading-relaxed">
+              💡 <strong>Regula „Will”:</strong> Când comanzi la masă, nu spui <em>„I want”</em> (sună dur). Spui întotdeauna <em>„I will have...”</em> sau <em>„Could I please have...”</em>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Phrase 6: Taxi & Directions -->
+        <div class="vault-card glass-light p-5 rounded-3xl border border-champagne-500/20 shadow-card space-y-3.5 hover:border-champagne-400 transition" data-category="taxi">
+          <div class="flex items-start justify-between">
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-50 text-rose-900 text-[10px] font-mono font-bold uppercase">Taxi & Urgențe</span>
+            <button onclick="speakText('How much does a taxi to the city center cost? Do you accept credit card?')" class="p-2 rounded-xl bg-alabaster-200 text-champagne-800 hover:bg-champagne-600 hover:text-white transition" title="Pronunță">
+              <i data-lucide="volume-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm">"How much does a taxi to center cost?"</h4>
+            <span class="text-xs font-serif italic text-slate-400">/haʊ mʌtʃ dʌz ə ˈtæksi kɑːst/</span>
+          </div>
+          <div class="p-3 rounded-2xl bg-alabaster-100 text-xs space-y-1">
+            <p class="font-semibold text-champagne-900">RO: Cât costă un taxi până în centrul orașului?</p>
+            <p class="text-slate-500 text-[11px] leading-relaxed">
+              💡 <strong>Întrebarea de aur:</strong> Întreabă mereu prețul aproximativ și dacă acceptă cardul (<em>Do you accept card?</em>) înainte de a urca în mașină.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- LEVEL 4: LISTENING LOUNGE WITH DUAL SCENARIOS & INTERACTIVE TESTING       -->
+    <!-- ========================================================================= -->
+    <section id="level-4" class="space-y-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between border-b border-champagne-500/25 pb-4 gap-2">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-champagne-800 font-bold flex items-center gap-2">
+            <i data-lucide="headphones" class="w-4 h-4 text-champagne-600"></i> Level 4 • Listening Lounge
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900">
+            Dual Real-World Audio Scenarios
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-500 max-w-sm sm:text-right">
+          Ascultă atent anunțul din difuzoarele aeroportului și discuția de la recepție.
+        </p>
+      </div>
+
+      <!-- SCENARIO 1: FLIGHT BOARDING & GATE ANNOUNCEMENT -->
+      <div class="glass-light rounded-3xl p-6 sm:p-8 space-y-6 border border-champagne-500/25 shadow-card">
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-alabaster-100 p-5 rounded-2xl border border-champagne-500/20">
+          <div>
+            <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-mediterranean-800 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              Scenario 1 • London Heathrow Terminal 2 (Speaker Audio)
+            </span>
+            <h3 class="font-serif font-bold text-lg text-slate-900 mt-1">
+              Gate Announcement: Ramona's Flight to Bucharest
+            </h3>
+          </div>
+
+          <div class="flex items-center gap-2.5">
+            <button onclick="playScenario1Audio()" id="btn-scen1-play" class="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-champagne-600 to-champagne-700 text-white font-bold text-xs flex items-center gap-2 shadow-md hover:shadow-gold transition">
+              <i data-lucide="play" class="w-4 h-4 fill-white"></i> <span>Play Chime & Announcement</span>
+            </button>
+            <button onclick="toggleTranscript(1)" id="btn-transcript-1" class="px-3.5 py-2.5 rounded-2xl bg-white border border-champagne-400 text-champagne-800 text-xs font-bold hover:bg-champagne-50 transition">
+              Arată Transcrierea
+            </button>
+          </div>
+        </div>
+
+        <!-- Hidden / Revealable Transcript -->
+        <div id="transcript-box-1" class="hidden p-5 rounded-2xl bg-white border border-slate-200 text-xs sm:text-sm leading-relaxed text-slate-700 space-y-2">
+          <p class="font-bold text-champagne-900 font-mono text-[11px] uppercase tracking-wider">Transcrierea Dialogului:</p>
+          <p>
+            <em>"Attention all passengers on flight AU-882 to Bucharest Otopeni. The gate is now changing from Gate 12 to Gate 24. Ramona Popescu and priority passengers, we are now boarding rows 1 to 10. Does anyone need special assistance? Please have your passport and boarding pass ready in your hand. We will close the aircraft doors in ten minutes."</em>
+          </p>
+        </div>
+
+        <!-- Fill-in-the-Blank Comprehension for Scenario 1 -->
+        <div class="space-y-4 pt-2">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-800 uppercase tracking-wider font-mono">Verificare Ascultare (Comprehension Check):</span>
+            <button onclick="checkScenario1Answers()" class="px-4 py-1.5 rounded-xl bg-champagne-600 text-white font-bold text-xs hover:bg-champagne-700 transition">
+              Verifică Răspunsurile
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+            
+            <div class="p-4 rounded-2xl bg-alabaster-50 border border-slate-200 space-y-2">
+              <span class="text-slate-500 font-mono block text-[11px]">1. La ce poartă s-a mutat zborul?</span>
+              <p class="text-slate-800">
+                The gate is changing to Gate 
+                <input type="text" id="listen-ans-1" placeholder="ex: 24" class="w-16 px-2 py-0.5 rounded border border-champagne-400 text-center font-bold text-slate-800 outline-none focus:ring-1 focus:ring-champagne-500">.
+              </p>
+              <span id="listen-fb-1" class="text-[11px] font-bold block"></span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-alabaster-50 border border-slate-200 space-y-2">
+              <span class="text-slate-500 font-mono block text-[11px]">2. Ce auxiliar se aude în întrebare?</span>
+              <p class="text-slate-800">
+                "<input type="text" id="listen-ans-2" placeholder="Do / Does" class="w-20 px-2 py-0.5 rounded border border-champagne-400 text-center font-bold text-slate-800 outline-none focus:ring-1 focus:ring-champagne-500"> anyone need assistance?"
+              </p>
+              <span id="listen-fb-2" class="text-[11px] font-bold block"></span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-alabaster-50 border border-slate-200 space-y-2">
+              <span class="text-slate-500 font-mono block text-[11px]">3. În cât timp se închid ușile avionului?</span>
+              <p class="text-slate-800">
+                We will close the doors in 
+                <input type="text" id="listen-ans-3" placeholder="ten" class="w-20 px-2 py-0.5 rounded border border-champagne-400 text-center font-bold text-slate-800 outline-none focus:ring-1 focus:ring-champagne-500"> minutes.
+              </p>
+              <span id="listen-fb-3" class="text-[11px] font-bold block"></span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- LEVEL 5: CONVERSATIONAL SPEAKING SIMULATOR (ROLEPLAY COCKPIT)             -->
+    <!-- ========================================================================= -->
+    <section id="level-5" class="space-y-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between border-b border-champagne-500/25 pb-4 gap-2">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-champagne-800 font-bold flex items-center gap-2">
+            <i data-lucide="mic" class="w-4 h-4 text-champagne-600"></i> Level 5 • Conversational Speaking Simulator
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900">
+            Interactive Spoken Roleplay Cards
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-500 max-w-sm sm:text-right">
+          Ascultă partenerul de conversație, citește modelul recomandat, apoi exersează cu voce tare!
+        </p>
+      </div>
+
+      <!-- 3 Roleplay Interactive Stations -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Roleplay Station 1 -->
+        <div class="glass-light rounded-3xl p-6 flex flex-col justify-between space-y-5 border border-champagne-500/25 shadow-card">
+          <div class="space-y-3.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-full bg-mediterranean-50 text-mediterranean-800 font-mono text-[10px] font-bold uppercase">Station A</span>
+              <span class="text-xs text-slate-400">Boarding Desk</span>
+            </div>
+
+            <!-- Interlocutor Prompt -->
+            <div class="p-3.5 rounded-2xl bg-mediterranean-50/70 border border-mediterranean-100 space-y-1 text-xs">
+              <span class="text-[10px] font-mono text-mediterranean-800 font-bold uppercase block">Ofițerul te întreabă:</span>
+              <p class="text-slate-800 font-semibold italic">"Good morning! Are you traveling with any hand luggage today?"</p>
+              <button onclick="speakText('Good morning! Are you traveling with any hand luggage today?')" class="text-mediterranean-700 hover:text-mediterranean-900 text-[11px] font-bold flex items-center gap-1 mt-1">
+                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i> Ascultă întrebarea ofițerului
+              </button>
+            </div>
+
+            <!-- Ramona's Response -->
+            <div class="p-3.5 rounded-2xl bg-alabaster-100 border border-champagne-500/20 space-y-1.5 text-xs">
+              <span class="text-[10px] font-mono text-champagne-800 font-bold uppercase block">Răspunsul recomandat pentru Ramona:</span>
+              <p class="text-slate-900 font-semibold">
+                "Yes, I am. I only have this small carry-on bag and my handbag."
+              </p>
+              <p class="text-[11px] text-slate-500 italic">RO: Da, am doar această mică geantă de mână și poșeta.</p>
+            </div>
+          </div>
+
+          <button onclick="speakText('Yes, I am. I only have this small carry-on bag and my handbag.')" class="w-full py-2.5 rounded-xl bg-white hover:bg-champagne-50 text-champagne-800 border border-champagne-400 font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition">
+            <i data-lucide="volume-2" class="w-4 h-4 text-champagne-600"></i> Pronunță Răspunsul Tău
+          </button>
+        </div>
+
+        <!-- Roleplay Station 2 -->
+        <div class="glass-light rounded-3xl p-6 flex flex-col justify-between space-y-5 border border-champagne-500/25 shadow-card">
+          <div class="space-y-3.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 font-mono text-[10px] font-bold uppercase">Station B</span>
+              <span class="text-xs text-slate-400">Hotel Lobby</span>
+            </div>
+
+            <!-- Interlocutor Prompt -->
+            <div class="p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-100 space-y-1 text-xs">
+              <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase block">Recepționerul te întreabă:</span>
+              <p class="text-slate-800 font-semibold italic">"Welcome to London! Are you going to need a taxi for tomorrow morning?"</p>
+              <button onclick="speakText('Welcome to London! Are you going to need a taxi for tomorrow morning?')" class="text-emerald-700 hover:text-emerald-900 text-[11px] font-bold flex items-center gap-1 mt-1">
+                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i> Ascultă recepționerul
+              </button>
+            </div>
+
+            <!-- Ramona's Response -->
+            <div class="p-3.5 rounded-2xl bg-alabaster-100 border border-champagne-500/20 space-y-1.5 text-xs">
+              <span class="text-[10px] font-mono text-champagne-800 font-bold uppercase block">Răspunsul recomandat pentru Ramona:</span>
+              <p class="text-slate-900 font-semibold">
+                "No, thank you. We are going to take the underground because it is very fast."
+              </p>
+              <p class="text-[11px] text-slate-500 italic">RO: Nu, mulțumesc. Vom lua metroul pentru că este foarte rapid.</p>
+            </div>
+          </div>
+
+          <button onclick="speakText('No, thank you. We are going to take the underground because it is very fast.')" class="w-full py-2.5 rounded-xl bg-white hover:bg-champagne-50 text-champagne-800 border border-champagne-400 font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition">
+            <i data-lucide="volume-2" class="w-4 h-4 text-champagne-600"></i> Pronunță Răspunsul Tău
+          </button>
+        </div>
+
+        <!-- Roleplay Station 3 -->
+        <div class="glass-light rounded-3xl p-6 flex flex-col justify-between space-y-5 border border-champagne-500/25 shadow-card">
+          <div class="space-y-3.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-full bg-champagne-200 text-champagne-900 font-mono text-[10px] font-bold uppercase">Station C</span>
+              <span class="text-xs text-slate-400">Coffee Bar</span>
+            </div>
+
+            <!-- Interlocutor Prompt -->
+            <div class="p-3.5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-1 text-xs">
+              <span class="text-[10px] font-mono text-amber-900 font-bold uppercase block">Barista te întreabă:</span>
+              <p class="text-slate-800 font-semibold italic">"Hi there! What can I get started for you today?"</p>
+              <button onclick="speakText('Hi there! What can I get started for you today?')" class="text-amber-800 hover:text-amber-950 text-[11px] font-bold flex items-center gap-1 mt-1">
+                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i> Ascultă chelnerul
+              </button>
+            </div>
+
+            <!-- Ramona's Response -->
+            <div class="p-3.5 rounded-2xl bg-alabaster-100 border border-champagne-500/20 space-y-1.5 text-xs">
+              <span class="text-[10px] font-mono text-champagne-800 font-bold uppercase block">Răspunsul recomandat pentru Ramona:</span>
+              <p class="text-slate-900 font-semibold">
+                "Hello! I will have a black tea with milk and one bottle of still water, please."
+              </p>
+              <p class="text-[11px] text-slate-500 italic">RO: Bună ziua! Voi lua un ceai negru cu lapte și o apă plată, vă rog.</p>
+            </div>
+          </div>
+
+          <button onclick="speakText('Hello! I will have a black tea with milk and one bottle of still water, please.')" class="w-full py-2.5 rounded-xl bg-white hover:bg-champagne-50 text-champagne-800 border border-champagne-400 font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition">
+            <i data-lucide="volume-2" class="w-4 h-4 text-champagne-600"></i> Pronunță Răspunsul Tău
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- LEVEL 6: SYNTHESIS & PRODUCTION STUDIO (WRITING HOMEWORK WITH AUTO-CHECK) -->
+    <!-- ========================================================================= -->
+    <section id="level-6" class="space-y-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between border-b border-champagne-500/25 pb-4 gap-2">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-champagne-800 font-bold flex items-center gap-2">
+            <i data-lucide="pen-tool" class="w-4 h-4 text-champagne-600"></i> Level 6 • Synthesis & Production Studio
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900">
+            Ramona's Travel Journal & Homework Assignment
+          </h2>
+        </div>
+        <span class="text-xs text-emerald-800 font-mono font-bold flex items-center gap-1.5 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-300">
+          <i data-lucide="save" class="w-3.5 h-3.5 text-emerald-600"></i> Salvare automată în memorie
+        </span>
+      </div>
+
+      <!-- Writing Studio Main Card -->
+      <div class="glass-light rounded-3xl p-6 sm:p-10 space-y-7 border border-champagne-500/30 shadow-luxury">
+        
+        <!-- Assignment Prompt Card -->
+        <div class="space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="px-3 py-1 rounded-full bg-champagne-500/20 text-champagne-900 font-mono text-xs font-bold uppercase">
+              Tema pentru acasă • Assignment Prompt
+            </span>
+            <span class="text-xs text-slate-400">• Recomandat: 5 - 7 propoziții complete</span>
+          </div>
+
+          <h3 class="font-serif font-bold text-2xl text-slate-900">
+            "My Next Vacation & Arrival at the Airport"
+          </h3>
+
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed max-w-3xl">
+            Scrie un scurt jurnal în limba engleză în care descrii viitoarea ta călătorie. Imaginează-ți că ești în aeroport sau la hotel. Pe măsură ce scrii, lista inteligentă de mai jos va verifica prezența structurilor gramaticale cheie!
+          </p>
+        </div>
+
+        <!-- Real-Time Target Grammar Checklist -->
+        <div class="bg-alabaster-100 p-5 rounded-2xl border border-champagne-500/20 space-y-3 text-xs">
+          <span class="font-mono text-xs uppercase tracking-wider text-champagne-800 font-bold block">
+            Verificare Automată a Structurilor (Live Checklist):
+          </span>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            
+            <div id="chk-item-1" class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-slate-200 transition">
+              <span id="chk-icon-1" class="w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center text-[10px] text-white"></span>
+              <span class="text-slate-700">1. O <strong>întrebare</strong> (conține <em>?</em> și <em>do/does/is/are</em>)</span>
+            </div>
+
+            <div id="chk-item-2" class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-slate-200 transition">
+              <span id="chk-icon-2" class="w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center text-[10px] text-white"></span>
+              <span class="text-slate-700">2. O frază <strong>negativă</strong> (conține <em>don't / not / isn't</em>)</span>
+            </div>
+
+            <div id="chk-item-3" class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-slate-200 transition">
+              <span id="chk-icon-3" class="w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center text-[10px] text-white"></span>
+              <span class="text-slate-700">3. Un plan stabilit cu <strong>"going to"</strong></span>
+            </div>
+
+            <div id="chk-item-4" class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-slate-200 transition">
+              <span id="chk-icon-4" class="w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center text-[10px] text-white"></span>
+              <span class="text-slate-700">4. O decizie spontană cu <strong>"will"</strong></span>
+            </div>
+
+            <div id="chk-item-5" class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-slate-200 sm:col-span-2 transition">
+              <span id="chk-icon-5" class="w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center text-[10px] text-white"></span>
+              <span class="text-slate-700">5. Cel puțin <strong>trei cuvinte din călătorie</strong> (ex: <em>flight, gate, suitcase, hotel, ticket, room</em>)</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Student Textarea Editor -->
+        <div class="space-y-2">
+          <div class="flex items-center justify-between text-xs font-mono text-slate-500 font-bold">
+            <span class="text-champagne-800">CAIETUL DE LUCRU AL RAMONEI:</span>
+            <span id="journal-counter">0 cuvinte • 0 caractere</span>
+          </div>
+
+          <textarea 
+            id="student-journal-input" 
+            rows="8" 
+            oninput="handleJournalTyping()"
+            placeholder="Dear teacher, next month I am going to travel to London with my family. We are going to stay at a central hotel. In the airport, I do not walk fast because my suitcase is heavy. Do you know where Gate 24 is? If I am thirsty, I will buy a bottle of water..." 
+            class="w-full p-5 rounded-2xl bg-white border border-champagne-400 text-slate-900 placeholder:text-slate-400 focus:border-champagne-600 focus:ring-4 focus:ring-champagne-500/10 outline-none text-base leading-relaxed font-sans shadow-sm transition"
+          ></textarea>
+        </div>
+
+        <!-- Interactive Actions for Student -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-champagne-500/20">
+          
+          <div class="flex flex-wrap items-center gap-3">
+            <button onclick="copyHomeworkForTeacher()" id="btn-copy-homework" class="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-champagne-600 to-champagne-700 text-white font-bold text-xs flex items-center gap-2 shadow-gold hover:brightness-105 transition">
+              <i data-lucide="copy" class="w-4 h-4"></i> <span id="label-copy-hw">Copiază tema pentru profesor</span>
+            </button>
+
+            <button onclick="readRamonaTextAloud()" class="px-4 py-2.5 rounded-2xl bg-white text-champagne-900 hover:bg-champagne-50 border border-champagne-400 text-xs font-bold flex items-center gap-2 shadow-sm transition">
+              <i data-lucide="volume-2" class="w-4 h-4 text-champagne-600"></i> Ascultă pronunția temei tale
+            </button>
+
+            <button onclick="clearJournalPad()" class="px-4 py-2.5 rounded-2xl bg-white text-slate-500 hover:text-rose-600 border border-slate-200 text-xs font-semibold transition">
+              Curăță
+            </button>
+          </div>
+
+          <button onclick="window.print()" class="px-4 py-2.5 rounded-2xl bg-white text-slate-700 hover:bg-slate-50 border border-slate-300 text-xs font-bold flex items-center gap-2 shadow-sm transition">
+            <i data-lucide="printer" class="w-4 h-4 text-slate-500"></i> Printează Fișa Ramonei
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- LUXURY LIGHT FOOTER -->
+  <footer class="mt-24 border-t border-champagne-500/20 bg-alabaster-200/90 py-12 relative z-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div class="space-y-1">
+        <span class="font-cinzel text-base tracking-widest text-gold-luxury font-bold block">
+          AURA PREMIER CLASS • ENGLISH FOR ADULT LEARNERS
+        </span>
+        <p class="text-xs text-slate-600">
+          Personalized curriculum designed for Ramona • Travel English, confidence, and fluency.
+        </p>
+      </div>
+
+      <div class="text-xs text-slate-500 space-y-1">
+        <p class="font-serif italic text-champagne-900 text-sm">„Fiecare călătorie începe cu prima frază rostită cu încredere.”</p>
+        <p class="text-[11px] text-slate-400">Lesson 2 • Multi-Level Fluency Mastery</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: SYNTHESIZER, PUZZLES, PHRASE VAULT, CHECKLIST, LOCALSTORAGE   -->
+  <!-- ========================================================================= -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // 1. WEB AUDIO API: SYNTHESIZED 2-TONE AIRPORT CHIME (F5 -> C5)
+    let audioCtx = null;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    function playTerminalChime(userTriggered = false) {
+      try {
+        const ctx = getAudioContext();
+        const now = ctx.currentTime;
+
+        const tones = [
+          { freq: 698.46, time: 0.0, dur: 0.55 }, // F5
+          { freq: 523.25, time: 0.38, dur: 0.75 }  // C5
+        ];
+
+        tones.forEach(t => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(t.freq, now + t.time);
+
+          // Subtle harmonics for luxury warmth
+          const oscWarm = ctx.createOscillator();
+          oscWarm.type = 'triangle';
+          oscWarm.frequency.setValueAtTime(t.freq * 2, now + t.time);
+
+          const gainWarm = ctx.createGain();
+          gainWarm.gain.setValueAtTime(0.08, now + t.time);
+          gainWarm.gain.exponentialRampToValueAtTime(0.001, now + t.time + t.dur);
+
+          gain.gain.setValueAtTime(0.24, now + t.time);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + t.time + t.dur);
+
+          osc.connect(gain);
+          oscWarm.connect(gainWarm);
+          gain.connect(ctx.destination);
+          gainWarm.connect(ctx.destination);
+
+          osc.start(now + t.time);
+          oscWarm.start(now + t.time);
+          osc.stop(now + t.time + t.dur);
+          oscWarm.stop(now + t.time + t.dur);
+        });
+      } catch (err) {
+        console.warn('Audio Context Chime Warning:', err);
+      }
+    }
+
+    function playTerminalChimeAndWelcome() {
+      playTerminalChime(true);
+      setTimeout(() => {
+        speakText("Good day Ramona. Welcome aboard Aura Airways flight 882 to London. Please get ready for your English lesson.");
+      }, 900);
+    }
+
+    // 2. WEB SPEECH API AT GENTLE TEMPO (0.82x - 0.85x)
+    let currentSpeechRate = 0.82;
+    let activeUtterance = null;
+
+    function cycleAudioSpeed() {
+      if (currentSpeechRate === 0.82) {
+        currentSpeechRate = 0.88;
+        document.getElementById('global-speed-label').textContent = '0.88x';
+        document.getElementById('speed-toggle-btn-txt').textContent = 'Speed: Medium';
+      } else if (currentSpeechRate === 0.88) {
+        currentSpeechRate = 1.0;
+        document.getElementById('global-speed-label').textContent = '1.0x';
+        document.getElementById('speed-toggle-btn-txt').textContent = 'Speed: Natural';
+      } else {
+        currentSpeechRate = 0.82;
+        document.getElementById('global-speed-label').textContent = '0.82x';
+        document.getElementById('speed-toggle-btn-txt').textContent = 'Speed: Gentle';
+      }
+      speakText(`Speed set to ${currentSpeechRate}`);
+    }
+
+    function getOptimalEnglishVoice() {
+      if (!('speechSynthesis' in window)) return null;
+      const voices = window.speechSynthesis.getVoices();
+      const preferred = voices.find(v => (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('Karen') || v.name.includes('Daniel') || v.name.includes('Moira')) && v.lang.startsWith('en'));
+      return preferred || voices.find(v => v.lang.startsWith('en')) || null;
+    }
+
+    function speakText(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = currentSpeechRate;
+      utterance.pitch = 1.0;
+      utterance.lang = 'en-US';
+
+      const voice = getOptimalEnglishVoice();
+      if (voice) utterance.voice = voice;
+
+      activeUtterance = utterance;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function stopAnySpeech() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    }
+
+    // 3. LEVEL 2: SENTENCE BUILDER PUZZLE LAB
+    const puzzleExercises = [
+      {
+        type: "Present Simple",
+        ro: "Pleacă acest tren spre centrul orașului la fiecare 15 minute?",
+        target: ["Does", "this train", "leave", "for the city center", "every fifteen minutes?"],
+        bank: ["every fifteen minutes?", "leave", "Does", "is", "this train", "for the city center", "Do"]
+      },
+      {
+        type: "Present Continuous",
+        ro: "Aștepți și tu în acest moment la rândul pentru bagaje?",
+        target: ["Are", "you", "waiting", "in the luggage line", "right now?"],
+        bank: ["waiting", "Do", "in the luggage line", "Are", "right now?", "you", "wait"]
+      },
+      {
+        type: "Future Will",
+        ro: "Valiza ta pare grea. Te voi ajuta eu cu plăcere!",
+        target: ["Your suitcase", "looks heavy.", "I will help", "you gladly!"],
+        bank: ["looks heavy.", "I will help", "Your suitcase", "am helping", "you gladly!", "will"]
+      },
+      {
+        type: "Future Going To",
+        ro: "Vom vizita muzeul mâine dimineață la ora zece.",
+        target: ["We are going to", "visit", "the museum", "tomorrow morning", "at ten."],
+        bank: ["visit", "We are going to", "tomorrow morning", "at ten.", "the museum", "will", "going"]
+      }
+    ];
+
+    let currentPuzzleIdx = 0;
+    let currentAssembled = [];
+
+    function switchPuzzle(idx) {
+      currentPuzzleIdx = idx;
+      currentAssembled = [];
+
+      for (let i = 0; i < 4; i++) {
+        const tab = document.getElementById(`puz-tab-${i}`);
+        if (i === idx) {
+          tab.className = "px-4 py-2 rounded-xl bg-champagne-600 text-white shadow-sm transition font-bold";
+        } else {
+          tab.className = "px-4 py-2 rounded-xl bg-alabaster-200 text-slate-700 hover:bg-champagne-100 transition";
+        }
+      }
+
+      document.getElementById('puz-current-num').textContent = (idx + 1);
+      document.getElementById('puzzle-ro-target').textContent = `„${puzzleExercises[idx].ro}”`;
+      document.getElementById('puzzle-feedback-msg').innerHTML = "<span>Alege cuvintele și apasă verifică.</span>";
+      document.getElementById('puzzle-feedback-msg').className = "text-xs font-bold text-slate-600";
+
+      renderPuzzleUI();
+    }
+
+    function renderPuzzleUI() {
+      const puz = puzzleExercises[currentPuzzleIdx];
+      const builtZone = document.getElementById('puzzle-built-zone');
+      const bankZone = document.getElementById('puzzle-tokens-bank');
+      const emptyHint = document.getElementById('puzzle-empty-hint');
+
+      builtZone.innerHTML = '';
+      bankZone.innerHTML = '';
+
+      if (currentAssembled.length === 0) {
+        emptyHint.classList.remove('hidden');
+      } else {
+        emptyHint.classList.add('hidden');
+      }
+
+      // Render assembled tokens
+      currentAssembled.forEach((token, index) => {
+        const btn = document.createElement('button');
+        btn.className = "px-3.5 py-1.5 rounded-xl bg-champagne-600 text-white font-bold text-xs shadow-sm flex items-center gap-1.5 hover:bg-champagne-700 transition";
+        btn.innerHTML = `${token} <span class="text-[10px] opacity-75">×</span>`;
+        btn.onclick = () => removeToken(index);
+        builtZone.appendChild(btn);
+      });
+
+      // Render available tokens in the bank
+      puz.bank.forEach(token => {
+        const usedCount = currentAssembled.filter(t => t === token).length;
+        const totalCount = puz.bank.filter(t => t === token).length;
+        const isDepleted = usedCount >= totalCount;
+
+        const btn = document.createElement('button');
+        btn.textContent = token;
+        btn.className = `px-3.5 py-1.5 rounded-xl text-xs font-bold border transition ${
+          isDepleted 
+            ? 'bg-slate-100 text-slate-300 border-slate-200 cursor-not-allowed opacity-50' 
+            : 'bg-white hover:bg-champagne-50 text-slate-800 border-champagne-400 shadow-sm'
+        }`;
+        btn.disabled = isDepleted;
+        btn.onclick = () => addToken(token);
+        bankZone.appendChild(btn);
+      });
+    }
+
+    function addToken(token) {
+      currentAssembled.push(token);
+      renderPuzzleUI();
+    }
+
+    function removeToken(index) {
+      currentAssembled.splice(index, 1);
+      renderPuzzleUI();
+    }
+
+    function resetPuzzleTokens() {
+      currentAssembled = [];
+      renderPuzzleUI();
+      document.getElementById('puzzle-feedback-msg').innerHTML = "<span>Ai resetat puzzle-ul. Încearcă din nou!</span>";
+    }
+
+    function checkPuzzleAnswer() {
+      const puz = puzzleExercises[currentPuzzleIdx];
+      const feedback = document.getElementById('puzzle-feedback-msg');
+      const assembledText = currentAssembled.join(' ');
+      const correctText = puz.target.join(' ');
+
+      if (assembledText === correctText) {
+        feedback.innerHTML = `<span class="text-emerald-700 font-bold">🎉 Excelent, Ramona! Corect: "${correctText}"</span>`;
+        speakText(correctText);
+      } else {
+        feedback.innerHTML = `<span class="text-rose-600 font-bold">⚠️ Mai verifică o dată! Urmărește ordinea: Auxiliar ➜ Subiect ➜ Verb.</span>`;
+      }
+    }
+
+    function speakPuzzleSentence() {
+      if (currentAssembled.length > 0) {
+        speakText(currentAssembled.join(' '));
+      } else {
+        speakText("Please add words to the sentence first.");
+      }
+    }
+
+    // 4. LEVEL 3: VAULT FILTER
+    function filterVault(category) {
+      const cards = document.querySelectorAll('.vault-card');
+      const categories = ['all', 'airport', 'customs', 'luggage', 'hotel', 'dining', 'taxi'];
+
+      categories.forEach(c => {
+        const btn = document.getElementById(`vtab-${c}`);
+        if (btn) {
+          if (c === category) {
+            btn.className = "px-4 py-2 rounded-xl bg-champagne-600 text-white shadow-sm transition font-bold";
+          } else {
+            btn.className = "px-4 py-2 rounded-xl bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition";
+          }
+        }
+      });
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // 5. LEVEL 4: SCENARIO 1 AUDIO & TEST
+    function playScenario1Audio() {
+      playTerminalChime(true);
+      setTimeout(() => {
+        const text = "Attention all passengers on flight AU-882 to Bucharest Otopeni. The gate is now changing from Gate 12 to Gate 24. Ramona Popescu and priority passengers, we are now boarding rows 1 to 10. Does anyone need special assistance? Please have your passport and boarding pass ready in your hand. We will close the aircraft doors in ten minutes.";
+        speakText(text);
+      }, 800);
+    }
+
+    function toggleTranscript(num) {
+      const box = document.getElementById(`transcript-box-${num}`);
+      const btn = document.getElementById(`btn-transcript-${num}`);
+      if (box.classList.contains('hidden')) {
+        box.classList.remove('hidden');
+        btn.textContent = 'Ascunde Transcrierea';
+      } else {
+        box.classList.add('hidden');
+        btn.textContent = 'Arată Transcrierea';
+      }
+    }
+
+    function checkScenario1Answers() {
+      const ans1 = (document.getElementById('listen-ans-1').value || '').trim();
+      const ans2 = (document.getElementById('listen-ans-2').value || '').trim().toLowerCase();
+      const ans3 = (document.getElementById('listen-ans-3').value || '').trim().toLowerCase();
+
+      // Check 1: 24
+      const fb1 = document.getElementById('listen-fb-1');
+      if (ans1 === '24') {
+        fb1.textContent = '✓ Corect! (Gate 24)';
+        fb1.className = 'text-[11px] font-bold text-emerald-700';
+      } else {
+        fb1.textContent = '✗ Răspuns: 24';
+        fb1.className = 'text-[11px] font-bold text-rose-600';
+      }
+
+      // Check 2: does
+      const fb2 = document.getElementById('listen-fb-2');
+      if (ans2 === 'does') {
+        fb2.textContent = '✓ Corect! (Does)';
+        fb2.className = 'text-[11px] font-bold text-emerald-700';
+      } else {
+        fb2.textContent = '✗ Răspuns: Does';
+        fb2.className = 'text-[11px] font-bold text-rose-600';
+      }
+
+      // Check 3: 10 or ten
+      const fb3 = document.getElementById('listen-fb-3');
+      if (ans3 === '10' || ans3 === 'ten') {
+        fb3.textContent = '✓ Corect! (10 min)';
+        fb3.className = 'text-[11px] font-bold text-emerald-700';
+      } else {
+        fb3.textContent = '✗ Răspuns: ten (10)';
+        fb3.className = 'text-[11px] font-bold text-rose-600';
+      }
+    }
+
+    // 6. LEVEL 6: PRODUCTION STUDIO & LIVE GRAMMAR CHECKLIST
+    const STORAGE_KEY_RAMONA = 'aura_lesson2_ramona_master_v2';
+
+    function handleJournalTyping() {
+      const text = document.getElementById('student-journal-input').value;
+
+      // Update counters
+      const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+      const chars = text.length;
+      document.getElementById('journal-counter').textContent = `${words} cuvinte • ${chars} caractere`;
+
+      // Persist in localStorage
+      try {
+        localStorage.setItem(STORAGE_KEY_RAMONA, text);
+      } catch (e) {}
+
+      // Analyze Grammar Targets
+      const lower = text.toLowerCase();
+
+      // 1. Question: Contains '?' and question auxiliary
+      const hasQ = lower.includes('?') && (lower.includes('do') || lower.includes('does') || lower.includes('is') || lower.includes('are') || lower.includes('where') || lower.includes('what'));
+      setChecklistItem(1, hasQ);
+
+      // 2. Negative: Contains don't / not / isn't / doesn't
+      const hasNeg = lower.includes("don't") || lower.includes("do not") || lower.includes("not") || lower.includes("doesn't") || lower.includes("isn't") || lower.includes("aren't");
+      setChecklistItem(2, hasNeg);
+
+      // 3. Going to
+      const hasGoingTo = lower.includes("going to");
+      setChecklistItem(3, hasGoingTo);
+
+      // 4. Will
+      const hasWill = lower.includes("will") || lower.includes("'ll");
+      setChecklistItem(4, hasWill);
+
+      // 5. Travel vocabulary (at least 3 words)
+      const travelVault = ['flight', 'hotel', 'gate', 'suitcase', 'luggage', 'passport', 'ticket', 'room', 'london', 'rome', 'airport', 'taxi', 'breakfast'];
+      let matchCount = 0;
+      travelVault.forEach(w => {
+        if (lower.includes(w)) matchCount++;
+      });
+      setChecklistItem(5, matchCount >= 3);
+
+      // Update Master Progress Bar based on completed checks
+      const checkedCount = [hasQ, hasNeg, hasGoingTo, hasWill, matchCount >= 3].filter(Boolean).length;
+      const progressPercent = Math.min(100, 20 + (checkedCount * 16));
+      document.getElementById('master-progress-bar').style.width = progressPercent + '%';
+      document.getElementById('master-progress-text').textContent = progressPercent + '%';
+    }
+
+    function setChecklistItem(num, passed) {
+      const icon = document.getElementById(`chk-icon-${num}`);
+      const item = document.getElementById(`chk-item-${num}`);
+
+      if (passed) {
+        icon.className = "w-4 h-4 rounded-full bg-emerald-600 flex items-center justify-center text-[10px] text-white font-bold";
+        icon.textContent = "✓";
+        item.classList.add('border-emerald-300', 'bg-emerald-50/60');
+      } else {
+        icon.className = "w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center text-[10px] text-white";
+        icon.textContent = "";
+        item.classList.remove('border-emerald-300', 'bg-emerald-50/60');
+      }
+    }
+
+    function loadSavedJournal() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY_RAMONA);
+        if (saved) {
+          document.getElementById('student-journal-input').value = saved;
+          handleJournalTyping();
+        }
+      } catch (e) {}
+    }
+
+    function copyHomeworkForTeacher() {
+      const textarea = document.getElementById('student-journal-input');
+      const text = textarea.value.trim();
+      if (!text) {
+        speakText("Please write your homework paragraph first.");
+        return;
+      }
+
+      textarea.select();
+      document.execCommand('copy');
+
+      const label = document.getElementById('label-copy-hw');
+      const original = label.textContent;
+      label.textContent = "Copiat cu succes pentru profesor! ✓";
+      setTimeout(() => {
+        label.textContent = original;
+      }, 2500);
+    }
+
+    function readRamonaTextAloud() {
+      const text = document.getElementById('student-journal-input').value.trim();
+      if (!text) {
+        speakText("Your notebook is empty. Please write your travel sentences first!");
+      } else {
+        speakText(text);
+      }
+    }
+
+    function clearJournalPad() {
+      document.getElementById('student-journal-input').value = '';
+      try {
+        localStorage.removeItem(STORAGE_KEY_RAMONA);
+      } catch (e) {}
+      handleJournalTyping();
+    }
+
+    // INITIALIZATION
+    window.onload = function() {
+      loadSavedJournal();
+      switchPuzzle(0);
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.getVoices();
+      }
+    };
+  </script>
+</body>
+</html>
